@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Move and Count the Circles</title>
+  <style>
+  .draggable { width: 50px; height: 50px; padding: 0.5em; }
+  div > p {
+    height: 25px;
+    width: 25px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".draggable" ).draggable();
+  } );
+
+  //make an alert when a div is dragged on mouse up?
+
+  let dropCount = 0;
+
+  //I want to track each drag end... ok lets get the mouse ups to get the ball rolling
+  
+  </script>
+</head>
+<body>
+ 
+<div class="draggable" class="ui-widget-content" id="circ1" onmouseup="mouseClicked()">
+  <p></p>
+</div>
+<div class="draggable" class="ui-widget-content" id="circ2" onmouseup="mouseClicked2()">
+  <p></p>
+</div>
+<div class="draggable" class="ui-widget-content" id="circ3" onmouseup="mouseClicked3()">
+  <p></p>
+</div>
+<!--<button onclick="mouseClicked()">Click me</button>-->
+
+<div id="comment">Circle 1 count:</div>
+  <p id="result"></p>
+
+<script>
+//Each draggable circle will track of how many times it was dragged around.
+
+    let tracker = document.getElementById("circ1");
+
+    tracker.addEventListener("mouseup", mouseClicked() => {
+        //had to stop here and go to spooky world pick up here
+        
+    })
+
+    let number = 1;
+    mouseClicked = function() {
+    console.log('ball one dragged = ' + number);
+    number++;
+    }
+
+    
+
+
+</script>
+ 
+</body>
+</html>
